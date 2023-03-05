@@ -1,9 +1,12 @@
 const URL = "https://63ecba1931ef61473b27eb9e.mockapi.io/AIP/products"
 
-function apiGetProduct(){
+function apiGetProduct(searchValue){
     return axios({
         method: "GET",
-        url: URL
+        url: URL,
+        params: {
+            name: searchValue || undefined,
+        },
       })
 }
   

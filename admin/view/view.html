@@ -64,14 +64,18 @@
         <main role="main" class="mt-5">
             <div class="d-flex justify-content-between mb-2 py-3 px-2 phoneBanner">
                 <div class="input-group w-25">
-                    <input id="month" class="form-control text-light" text="number" placeholder="Nhập từ khóa">
-                    <div class="input-group-append">
+                    <input id="txtsearch" class="form-control" placeholder="Nhập từ khóa tìm kiếm">
+                    <!-- <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="text-right">
+                    <button type="button" onclick="arrangeProduct2()"  class="btn btn-banner" data-target="#exampleModal"
+                        data-whatever="" id="btnTang"> <i class="fa fa-arrow-up"></i></button>
+                    <button type="button" onclick="arrangeProduct()" class="btn btn-banner" data-target="#exampleModal"
+                        data-whatever="" id="btnGiam"><i class="fa fa-arrow-down"></i></button>
                     <button type="button" class="btn btn-banner" data-toggle="modal" data-target="#exampleModal"
-                        data-whatever=""><i class="fa-solid fa-circle-plus me-2" id="btnThemSP"></i> Add Phone</button>
+                        data-whatever="" id="btnThemSP"><i class="fa-solid fa-circle-plus me-2" ></i> Add Phone</button>
                 </div>
             </div>
             <div class=" table-responsive">
@@ -108,7 +112,7 @@
                                         <input type="text" name="name" id="name" class="form-control input-sm"
                                             placeholder="Phone name" />
                                     </div>
-                                    <span class="sp-thongbao" id="tbname"></span>
+                                    <span class="sp-thongbao" id="tbname" style="color: rgb(223, 56, 56);"></span>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
@@ -119,7 +123,7 @@
                                         <input type="text" name="name" id="price" class="form-control input-sm"
                                             placeholder="Price" />
                                     </div>
-                                    <span class="sp-thongbao" id="tbprice"></span>
+                                    <span class="sp-thongbao" id="tbprice" style="color: rgb(223, 56, 56);"></span>
                                 </div>
 
                                 <!-- <div class="form-group">
@@ -166,7 +170,7 @@
                                             placeholder="Image link" />
                                     </div>
 
-                                    <span class="sp-thongbao" id="tbimg"></span>
+                                    <span class="sp-thongbao" id="tbimg" style="color: rgb(223, 56, 56);"></span>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group">
@@ -177,7 +181,7 @@
                                             placeholder="Description" />
                                     </div>
 
-                                    <span class="sp-thongbao" id="tbdesc"></span>
+                                    <span class="sp-thongbao" id="tbdesc" style="color: rgb(223, 56, 56);"></span>
                                 </div>
 
 
@@ -193,7 +197,7 @@
                                         </select>
                                     </div>
 
-                                    <span class="sp-thongbao" id="tbtype"></span>
+                                    <span class="sp-thongbao" id="tbtype" style="color: rgb(223, 56, 56);"></span>
                                 </div>
 
                             </form>
@@ -306,7 +310,7 @@
     </footer>
 
 
-    <script src="../controller/main.js"></script>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
