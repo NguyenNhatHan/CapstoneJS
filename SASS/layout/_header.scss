@@ -1,0 +1,28 @@
+// Mobile first
+.black{
+  background-color: rgba(0, 0, 0, 0.612);
+}
+#cart {
+  color:white;
+  font-size: 30px;
+}
+.nav2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.nav1 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.navbar-toggler{
+  z-index: 99;
+}
+@include responsive("lg"){
+  .nav2{
+    display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  }
+}

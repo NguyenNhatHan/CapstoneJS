@@ -1,0 +1,9 @@
+.banner_btn .btn{
+    background-color: $color-background;
+    color: $color-white;
+    margin-top: 30px;
+}
+.btn:hover{
+    background-color: $color-background2;
+    transition: all 1s;
+}
