@@ -40,7 +40,7 @@ function renderProducts(products) {
     return (
       result +
       `
-        <div class="col-4 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-xl-4 col-lg-4 fa-money-bill-alt4 mb-4">
         <div class="card">
           <div class="product-item">
             <img

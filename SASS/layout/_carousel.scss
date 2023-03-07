@@ -4,14 +4,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 800px;
 }
 .mobile{
   width: 100%;
 }
 .banner__content {
   
-  transform: translateY(50%);
+  transform: translateY(20%);
 }
 h1{
   font-weight: 800;
@@ -23,4 +23,24 @@ h1{
 h3{
   font-weight: 600;
   color: $color-white;
+}
+
+@include responsive("md") {
+  .banner{ 
+    height: 600px;
+  }
+  .banner__content {
+    transform: translateY(30%);
+  }
+  .mobile{
+    width: 100%;
+  }
+}
+@include responsive("lg"){
+  .banner{ 
+    height: 600px;
+  }
+  .banner__content {
+    transform: translateY(50%);
+  }
 }
