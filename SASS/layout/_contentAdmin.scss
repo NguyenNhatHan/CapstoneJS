@@ -1,0 +1,15 @@
+.content {
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 12px 12px 0 0;
+
+  .modal-header {
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

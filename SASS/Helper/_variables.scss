@@ -1,0 +1,20 @@
+$color-background: #df461f;
+$color-grey-light: rgba(255, 255, 255, 0.472);
+$color-white: white;
+$color-background2: #f6c217;
+$color-background3: linear-gradient(
+  to top left,
+  rgba(255, 255, 255, 0) 22.49%,
+  rgb(255, 255, 255) 73.49%
+);
+$color-background-white: white;
+$color-background-gray: #f5f5f5;
+
+
+// responsive screen
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
