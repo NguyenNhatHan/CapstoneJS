@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Cyber Phone</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark black fixed-top mb-5">
+        <div class="container">
+            <a class="navbar-brand me-5 font" href="#">
+                <i class="fa fa-robot"></i>
+                Cyber Phone</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto nav1">
+                    <li class="nav-item text-center mx-5">
+                        <a class="nav-link" href="../../home page/index.html">
+                            <div>
+                                <i class="fa fa-home"></i>
+                            </div>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" href="#">
+                            <div>
+                                <i class="fa fa-store"></i>
+                            </div>
+                            Store
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav me-auto nav2">
+                    <li class="nav-item text-center ">
+                        <a class="nav-link" href="#">
+                            <div>
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                            Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container ">
+        <main role="main" class="mt-5">
+            <div class="d-flex justify-content-between mb-2 py-3 px-2 phoneBanner">
+                <div class="input-group w-25">
+                    <input id="txtsearch" class="form-control" placeholder="Nhập từ khóa tìm kiếm">
+                    <!-- <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                    </div> -->
+                </div>
+                <div class="text-right">
+                    <button type="button" onclick="arrangeProduct2()"  class="btn btn-banner" data-target="#exampleModal"
+                        data-whatever="" id="btnTang"> <i class="fa fa-arrow-up"></i></button>
+                    <button type="button" onclick="arrangeProduct()" class="btn btn-banner" data-target="#exampleModal"
+                        data-whatever="" id="btnGiam"><i class="fa fa-arrow-down"></i></button>
+                    <button type="button" class="btn btn-banner" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="" id="btnThemSP"><i class="fa-solid fa-circle-plus me-2" ></i> Add Phone</button>
+                </div>
+            </div>
+            <div class=" table-responsive">
+                <table class="table display" id="myTable">
+                    <thead class="">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Photo</th>
+                            <th>Discription</th>
+                            <th><em class="fa fa-cog"></em> Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablePhone"></tbody>
+                </table>
+            </div>
+            <div class="modal fade" id="exampleModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <header class="head-form mb-0">
+                            <h3 id="header-title">Phone Management</h3>
+                        </header>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form role="form" id="formPhone">
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-solid fa-mobile-screen-button"></i></span>
+                                        </div>
+                                        <input type="text" name="name" id="name" class="form-control input-sm"
+                                            placeholder="Phone name" />
+                                    </div>
+                                    <span class="sp-thongbao" id="tbname" style="color: rgb(223, 56, 56);"></span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-regular fa-dollar-sign"></i></span>
+                                        </div>
+                                        <input type="text" name="name" id="price" class="form-control input-sm"
+                                            placeholder="Price" />
+                                    </div>
+                                    <span class="sp-thongbao" id="tbprice" style="color: rgb(223, 56, 56);"></span>
+                                </div>
+
+                                <!-- <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-solid fa-mobile-screen"></i></span>
+                                        </div>
+                                        <input type="text" name="email" id="screen" class="form-control input-sm"
+                                            placeholder="Screen" />
+                                    </div>
+
+                                    <span class="sp-thongbao" id="tbscreen"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-camera"></i></span>
+                                        </div>
+                                        <input type="text" name="name" id="backCam" class="form-control"
+                                            placeholder="Back Camera" />
+                                    </div>
+
+                                    <span class="sp-thongbao" id="tbbackCam"></span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-camera"></i></i></span>
+                                        </div>
+                                        <input type="text" name="name" id="frontCam" class="form-control"
+                                            placeholder="Front Camera" />
+                                    </div>
+
+                                    <span class="sp-thongbao" id="tbfrontCam"></span>
+                                </div> -->
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-link"></i></i></span>
+                                        </div>
+                                        <input type="text" name="name" id="img" class="form-control"
+                                            placeholder="Image link" />
+                                    </div>
+
+                                    <span class="sp-thongbao" id="tbimg" style="color: rgb(223, 56, 56);"></span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-comment"></i></span>
+                                        </div>
+                                        <input type="text" name="name" id="desc" class="form-control"
+                                            placeholder="Description" />
+                                    </div>
+
+                                    <span class="sp-thongbao" id="tbdesc" style="color: rgb(223, 56, 56);"></span>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+                                        </div>
+                                        <select class="form-control" name="chucvu" id="type">
+                                            <option selected disabled>Select brand</option>
+                                            <option>Apple</option>
+                                            <option>Samsung</option>
+                                        </select>
+                                    </div>
+
+                                    <span class="sp-thongbao" id="tbtype" style="color: rgb(223, 56, 56);"></span>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer" id="modal-footer">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <footer class="text-lg-start bg-dark text-light gradient-custom mt-5">
+        <section class="d-flex justify-content-center p-4 border-bottom">
+            <div class="mr-5 d-none d-lg-block size">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="#" class="mr-4 text-reset size">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="mr-4 text-reset size">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="#" class="mr-4 text-reset size">
+                    <i class="fab fa-google-plus"></i>
+                </a>
+                <a href="#" class="mr-4 text-reset size"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="mr-4 text-reset size"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="mr-4 text-reset size"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+        <section>
+            <div class="container text-ringt mt-4">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fa fa-robot"></i>
+                            Cyber Phone
+                        </h6>
+                        <p>We pride ourselves on our efficiency and hard work, but most of all our ability to source you
+                            the best quality and best value products and devices in the market.</p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Brands</h6>
+                        <p>
+                            <a href="#" class="text-reset">iphone</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">samsung</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">xiaomi</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">oppo</a>
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">USEFUL LINKS</h6>
+                        <p>
+                            <a href="#" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Orders
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset"> Help</a>
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">CONTACT</h6>
+                        <p>
+                            <a href="#" class="text-reset">
+                                <i class="fa fa-home mr-2"></i>
+                                Da Nang,VN</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">
+                                <i class="fa fa-envelope mr-2"></i>
+                                cyber@mail.com</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">
+                                <i class="fa fa-phone mr-2"></i>
+                                + 01 234 567 88
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">
+                                <i class="fa fa-print"></i>
+                                + 01 234 567 89</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="#">Cyber Phone</a>
+        </div>
+    </footer>
+
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script src="../model/phone.js"></script>
+    <script src="../services/phoneServices.js"></script>
+    <script src="../controller/main.js"></script>
+</body>
+
+</html>

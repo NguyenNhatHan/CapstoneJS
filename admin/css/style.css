@@ -107,7 +107,7 @@ header h3 {
   height: auto;
   border-radius: 5px;
   margin: 2% auto;
-  box-shadow: 0 9px 50px hsla(216deg, 83%, 68%, 0.31);
+  box-shadow: 0 9px 50px hsla(216, 83%, 68%, 0.31);
   padding: 2%;
   background-image: linear-gradient(250deg, #e3ecfd, #fff0e8);
 }
